@@ -50,12 +50,11 @@
 GitHub Pages에서 페이지가 하얗게(Blank) 나오는 경우, 다음 단계를 따라 배포하세요:
 
 1. **상대 경로 설정**: `vite.config.ts`에서 `base: './'`를 추가했습니다. (완료)
-2. **배포 명령 실행**: 터미널에서 다음 명령어를 입력하세요.
-   ```bash
-   npm run deploy
-   ```
-   이 명령은 프로젝트를 빌드(`dist` 폴더 생성)하고 `gh-pages` 브랜치에 자동으로 업로드합니다.
-3. **GitHub 설정**: GitHub 저장소의 **Settings > Pages** 메뉴에서 Source를 `Deploy from a branch`로 선택하고, Branch를 `gh-pages`로 설정하세요.
+2. **배포 명령 실행**: 터미널에서 `npm run deploy`를 입력하여 수동으로 배포하세요.
+3. **권한 이슈 안내**: 만약 `Insufficient permissions to push workflow files` 에러가 발생하여 깃허브 동기화가 되지 않는다면, 이는 AI Studio 앱에 'Workflows' 수정 권한이 없기 때문입니다.
+   - **해결책**: GitHub에서 [Google AI Studio App 설정](https://github.com/settings/apps/google-ai-studio)에 들어가 'Permissions & events'에서 'Workflows' 권한을 'Read and Write'로 변경해 주세요.
+   - 권한 변경 전까지는 `.github/workflows/` 내부 파일을 AI Studio에서 수정할 수 없습니다.
+4. **GitHub 설정**: GitHub 저장소의 **Settings > Pages** 메뉴에서 Source를 `Deploy from a branch`로 선택하고, Branch를 `gh-pages`로 설정하세요.
 
 ---
 © 2026 AI Prompt Research Lab.
