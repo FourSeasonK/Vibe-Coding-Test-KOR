@@ -45,5 +45,17 @@
 - `src/types.ts`: TypeScript 인터페이스 정의
 - `src/index.css`: 글로벌 스타일 및 테마 정의
 
+### GitHub Pages 배포 (중요)
+
+GitHub Pages에서 페이지가 하얗게(Blank) 나오는 경우, 다음 단계를 따라 배포하세요:
+
+1. **상대 경로 설정**: `vite.config.ts`에서 `base: './'`를 추가했습니다. (완료)
+2. **배포 명령 실행**: 터미널에서 다음 명령어를 입력하세요.
+   ```bash
+   npm run deploy
+   ```
+   이 명령은 프로젝트를 빌드(`dist` 폴더 생성)하고 `gh-pages` 브랜치에 자동으로 업로드합니다.
+3. **GitHub 설정**: GitHub 저장소의 **Settings > Pages** 메뉴에서 Source를 `Deploy from a branch`로 선택하고, Branch를 `gh-pages`로 설정하세요.
+
 ---
 © 2026 AI Prompt Research Lab.
